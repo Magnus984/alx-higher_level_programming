@@ -6,6 +6,7 @@
  */
 void print_python_list_info(PyObject *p)
 {
+	int i;
 	const char *type_name;
 	PyObject *element;
 	long int length = PyList_Size(p);
