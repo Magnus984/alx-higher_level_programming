@@ -1,5 +1,9 @@
 #include <python.h>
-
+/**
+ * print_python_list_info - prints basic information about python list
+ * @p: python object
+ * Return: no return value
+ */
 void print_python_list_info(PyObject *p)
 {
 	const char *type_name;
