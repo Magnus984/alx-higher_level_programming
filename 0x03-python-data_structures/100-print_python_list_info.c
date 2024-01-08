@@ -17,7 +17,7 @@ void print_python_list_info(PyObject *p)
 	j = 0;
 	while (j < length)
 	{
-		printf("Element %i: %s\n", i, Py_TYPE(list_obj->ob_item[j])->tp_name);
+		printf("Element %i: %s\n", j, Py_TYPE(list_obj->ob_item[j])->tp_name);
 		j++;
 	}
 }
