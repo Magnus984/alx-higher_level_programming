@@ -98,3 +98,25 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((2 * self.__width) + (2 * self.__height))
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """
+        Returns biggest triangle based on area.
+
+        Args:
+            rect_1(Rectangle): rectangle one
+            rect_2(Rectangle): rectangle two
+        Raises:
+            TypeError: if rect_1 or rect_2 isn't an instance of Rectangle
+        """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() > rect_2.area():
+            return rect_1
+        elif rect_2.area() > rect_1.area():
+            return rect_2
+        elif rect_1.area() == rect_2.area():
+            return rect_1
