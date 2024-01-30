@@ -7,6 +7,7 @@ Defines a class rectangle.
 class Rectangle:
     """Represents a rectangle"""
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """
@@ -27,12 +28,12 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
-        rectangle = []
+        rec = []
         for i in range(self.__height):
-            [rectangle.append('#') for j in range(self.__width)]
+            [rec.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
-                rectangle.append("\n")
-        return ("".join(rectangle))
+                rec.append("\n")
+        return ("".join(rec))
 
     def __repr__(self):
         """string representation of instance of rectangle"""
