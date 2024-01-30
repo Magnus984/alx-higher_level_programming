@@ -6,6 +6,8 @@ Defines a class rectangle.
 
 class Rectangle:
     """Represents a rectangle"""
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """
         Initializes any object of rectangle class.
@@ -16,6 +18,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     def __str__(self):
         """Return the printable representation of the Rectangle.
@@ -39,6 +42,7 @@ class Rectangle:
     def __del__(self):
         """Prints message when an instance of rectangle is deleted"""
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
