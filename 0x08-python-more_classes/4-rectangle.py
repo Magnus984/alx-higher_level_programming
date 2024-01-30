@@ -31,6 +31,11 @@ class Rectangle:
                 rectangle.append("\n")
         return ("".join(rectangle))
 
+    def __repr__(self):
+        """string representation of instance of rectangle"""
+        rectangle = "Rectangle({}, {})".format(self.__width, self.__height)
+        return rectangle
+
     @property
     def width(self):
         """gets width of instance."""
