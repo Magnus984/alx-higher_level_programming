@@ -120,3 +120,12 @@ class Rectangle:
             return rect_2
         elif rect_1.area() == rect_2.area():
             return rect_1
+
+    @classmethod
+    def square(cls, size=0):
+        """Returns a new Rectangle instance with equal width and height.
+
+        Args:
+            size(int): the width and height of new Rectangle.
+        """
+        return (cls(size, size))
