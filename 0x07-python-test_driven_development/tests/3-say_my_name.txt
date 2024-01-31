@@ -1,0 +1,23 @@
+The ``3-say_my_name``module
+===========================
+This text file contains tests for ``say_my_name`` function
+
+First import function:
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Both parameters must be strings:
+>>> say_my_name(5)
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+
+>>> say_my_name("Magnus", [9])
+Traceback (most recent call last):
+	...
+TypeError: last_name must be a string
+
+>>> say_my_name("Magnus", "Tetteh")
+My name is Magnus Tetteh
+
+>>> say_my_name("Beatrice")
+My name is Beatrice 
