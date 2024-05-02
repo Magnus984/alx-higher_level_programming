@@ -15,7 +15,9 @@ if __name__ == '__main__':
             db=sys.argv[3]
     )
     cur = db.cursor()
-    myQuery = "SELECT * FROM states WHERE name = '{}' ORDER BY states.id"
+    query1 = "SELECT * FROM states "
+    query2 = "WHERE BINARY name = '{}' ORDER BY states.id"
+    myQuery = query1 + query2
     cur.execute(myQuery.format(sys.argv[4]))
     rows = cur.fetchall()
     for row in rows:
