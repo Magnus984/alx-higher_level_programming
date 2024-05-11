@@ -2,20 +2,16 @@
 """
 Implementing ORM sqlalchemy
 """
-import sqlalchemy
-from sqlalchemy import create_engine, Sequence
+from sqlalchemy import Sequence
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 
-
-engine = create_engine(
-        'mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa'
-        )
 
 Base = declarative_base()
 
 
 class States(Base):
+    """Represents a state table in a database"""i
     __tablename__ = 'states'
 
     id = Column(
